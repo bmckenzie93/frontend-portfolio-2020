@@ -1,9 +1,10 @@
 import './App.css';
+import Hero from './components/layout/Hero/Hero';
 
 function App() {
   return (
     <div className="App">
-      Brandon McKenzie Portfolio
+      <Hero />
     </div>
   );
 }
