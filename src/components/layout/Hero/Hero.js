@@ -6,23 +6,21 @@ import Button from '../../UI/Button/Button'
 
 const Hero = () => {
   // somehow bind the styles being added and removed to the icon to rotate it
+  //try with rarr  n
 
-  let arrowStyle = {padding: '0 1rem'};
+  const arrowStyle = { transition: '.5s' }
 
-  
   const hoverHandler = () => {
-    console.log(arrowStyle)
-    arrowStyle = {...arrowStyle, transform: 'rotate(90deg)'}
-    console.log(arrowStyle)
+    const arrow = document.getElementById('arrow')
+    arrow.style.transform = 'rotate(90deg)';
   }
   
   const unHoverHandler = () => {
-    console.log(arrowStyle);
-    arrowStyle = {padding: '0 1rem'};
-    console.log(arrowStyle);
+    const arrow = document.getElementById('arrow')
+    arrow.style.transform = 'rotate(0deg)';
   }
   // put the rotate on the icon itself 
-  const arrow = <i className="fas fa-arrow-right" style={arrowStyle}></i>
+  // const arrow = 
 
   return (
     <header className={styles.Hero}>
@@ -31,7 +29,7 @@ const Hero = () => {
       <Button
         onHover={hoverHandler}
         offHover={unHoverHandler}>
-          View my work &nbsp; {arrow}
+          View my work &nbsp; <i className="fas fa-arrow-right" id="arrow" style={arrowStyle}></i>
       </Button>
     </header>
   )
