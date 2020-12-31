@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Hero.module.css'
 import Button from '../../UI/Button/Button'
+import Background from '../../../assets/digitalBG.mp4'
 
 
 
@@ -23,7 +24,11 @@ const Hero = () => {
   // const arrow = 
 
   return (
+
     <header className={styles.Hero}>
+      <video autoPlay loop muted className={styles.Video}>
+        <source src={Background} type="video/mp4"/>
+      </video>
       <p>Hello, I'm <b style={{color: '#e31b6d'}}>Brandon McKenzie</b>.</p>
       <p>I'm a front-end web developer.</p>
       <Button
