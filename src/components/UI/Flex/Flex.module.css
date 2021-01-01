@@ -1,11 +1,18 @@
 .Flex {
   display: flex;
   justify-content: space-evenly;
+  margin: 3rem 0; 
 }
 
 @media screen and (max-width: 750px) {
   .Flex {
     flex-direction: column;
-    margin: 0 auto;
+    margin: 3rem auto;
   }
+}
+
+.FlexWrap {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }

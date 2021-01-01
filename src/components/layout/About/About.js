@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './About.module.css'
 import Card from '../../UI/Card/Card'
 import Flex from '../../UI/Flex/Flex'
+import FlexWrap from '../../UI/Flex/FlexWrap'
 import Heading from '../../UI/Heading/Heading'
 
 const About = () => {
@@ -46,6 +47,17 @@ const About = () => {
           </div>
         </Card>
       </Flex>
+
+      <FlexWrap>
+      <i style={{padding: '2rem'}} style={{padding: '2rem'}} class="fab fa-4x fa-react"></i>
+      <i style={{padding: '2rem'}} class="fab fa-4x fa-css3-alt"></i>
+      <i style={{padding: '2rem'}} class="fab fa-4x fa-js-square"></i>
+      <i style={{padding: '2rem'}} class="fab fa-4x fa-html5"></i>
+      <i style={{padding: '2rem'}} class="fab fa-4x fa-sass"></i>
+      <i style={{padding: '2rem'}} class="fab fa-4x fa-bootstrap"></i>
+      <i style={{padding: '2rem'}} class="fab fa-4x fa-github-square"></i>
+      <i style={{padding: '2rem'}} class="fab fa-4x fa-npm"></i>
+      </FlexWrap>
 
     </section>
   )

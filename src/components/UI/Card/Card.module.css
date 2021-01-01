@@ -2,7 +2,7 @@
   border-radius: 10px;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.4);
   padding: 2rem;
-  transition: transform .2s ease-out;
+  transition: transform .3s ease-out;
   max-width: 30%;
   min-height: 20rem;
   display: flex;
