@@ -1,0 +1,24 @@
+.Card {
+  border-radius: 10px;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  transition: all .2s ease-out;
+  max-width: 30%;
+}
+
+@media screen and (max-width: 750px) {
+  .Card {
+    margin: 1rem auto;
+    max-width: 50%;
+  }
+}
+
+  .Card:hover {
+    transform: translateY(-.5rem);
+  }
+  @media screen and (max-width: 750px) {
+    .Card:hover {
+      transform: translateY(0);
+      transform: scale(1.1);
+    }
+  }

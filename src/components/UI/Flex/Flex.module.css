@@ -1,0 +1,11 @@
+.Flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 750px) {
+  .Flex {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
