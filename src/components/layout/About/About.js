@@ -55,6 +55,7 @@ const About = () => {
       <i style={{padding: '2rem'}} class="fab fa-4x fa-html5"></i>
       <i style={{padding: '2rem'}} class="fab fa-4x fa-sass"></i>
       <i style={{padding: '2rem'}} class="fab fa-4x fa-bootstrap"></i>
+      <i style={{padding: '2rem'}} class="fab fa-4x fa-wordpress"></i>
       <i style={{padding: '2rem'}} class="fab fa-4x fa-github-square"></i>
       <i style={{padding: '2rem'}} class="fab fa-4x fa-npm"></i>
       </FlexWrap>
