@@ -1,0 +1,7 @@
+.ProjectHeader {
+  width: 100%;
+  min-height: 2rem;
+  align-items: center;
+  background-color: #ccc;
+  padding: .5rem;
+}
