@@ -1,6 +1,7 @@
 .Heading {
   font-size: 3rem;
   letter-spacing: 8px;
+  text-align: center;
 }
 
   @media screen and (max-width: 720px) {

@@ -7,11 +7,8 @@ const Project = props => {
   return (
     <div className={styles.Flex}>
       <div className={styles.Project}>
-        <ProjectHeader />
-        <ProjectBody />
-      </div>
-      <div>
-        skills tags
+        <ProjectHeader title={props.title}/>
+        <ProjectBody image={props.image}/>
       </div>
     </div>
   )

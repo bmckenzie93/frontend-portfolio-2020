@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './ProjectHeader.module.css'
 
-const ProjectHeader = () => {
+const ProjectHeader = props => {
   return (
     <header className={styles.ProjectHeader}>
-      Wild Water World
+      {props.title}
     </header>
   )
 }
