@@ -8,7 +8,6 @@ const Footer = () => {
   return (
     <footer className={styles.Footer}>
       <p>BRANDON MCKENZIE<span style={{color: '#e31b6d'}}>&copy;{year}</span></p>
-      
     </footer>
   )
 }

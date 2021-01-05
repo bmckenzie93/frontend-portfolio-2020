@@ -3,12 +3,13 @@ import Underline from '../Underline/Underline'
 import styles from './Heading.module.css'
 
 const Heading = props => {
+
   return (
     <>
       <h2 className={styles.Heading}>
         {props.title.toUpperCase()}
       </h2>
-      <Underline />
+      <Underline color={props.color}/>
     </>
   )
 }

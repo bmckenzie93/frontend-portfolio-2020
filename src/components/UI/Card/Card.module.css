@@ -1,7 +1,7 @@
 .Card {
   border-radius: 10px;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.4);
-  padding: 2rem;
+  padding: 1.8rem;
   transition: transform .3s ease-out;
   max-width: 30%;
   min-height: 20rem;
@@ -11,20 +11,26 @@
   background-color: #fff;
 }
 
+.Card:hover {
+  transform: scale(1.1);
+  border: 2px solid #04c2c9;
+}
+
+@media screen and (max-width: 1100px) {
+    .Card {
+      padding: 1rem;
+    }
+  }
+
 @media screen and (max-width: 750px) {
   .Card {
     margin: 1rem auto;
     max-width: 80%;
   }
-}
+}  
 
-  .Card:hover {
-    transform: translateY(-.5rem);
-    border: 2px solid #04c2c9;
-  }
   @media screen and (max-width: 750px) {
     .Card:hover {
-      transform: translateY(0);
       transform: scale(1.1);
     }
   }

@@ -16,13 +16,13 @@ const Contact = () => {
       <Wedge />
         <Heading 
           title="contact"
-          style={{color:'#fff'}} />
+          color='#fff' />
 
         <p style={{
           textAlign: 'center', 
-          marginBottom: '2rem',
+          marginBottom: '3rem',
           color: '#04c2c9'}}>
-            
+
             Have a question or want to work together?
         </p>
 

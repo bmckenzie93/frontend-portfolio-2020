@@ -15,7 +15,9 @@ const Projects = () => {
   return (
     <section className={styles.Projects}>
       <Container size="Large">
-        <Heading title="projects" />
+        <Heading 
+          title="projects"
+          color="#000" />
 
         <Project 
           title='Immersed in Art'

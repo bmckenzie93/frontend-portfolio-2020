@@ -10,7 +10,9 @@ const About = () => {
   return (
     <section className={styles.About}>
       <Container size="Large">
-        <Heading title ='about' />
+        <Heading 
+          title ='about'
+          color='#000' />
 
         <h1 style={{ fontWeight: 'lighter', marginBottom: '3rem' }}>
           I love to design and code responsive websites and web applications.

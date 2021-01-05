@@ -1,6 +1,6 @@
 .Flex {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: 3rem 0; 
 }
 
