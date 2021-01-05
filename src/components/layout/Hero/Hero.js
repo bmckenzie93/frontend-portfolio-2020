@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Hero.module.css'
 import Button from '../../UI/Button/Button'
 import Background from '../../../assets/digitalBG.mp4'
+import Container from '../../UI/Container/Container'
 
 
 const Hero = () => {
@@ -22,6 +23,7 @@ const Hero = () => {
       <video autoPlay loop muted className={styles.Video}>
         <source src={Background} type="video/mp4"/>
       </video>
+      <Container size="Large">
       <p>Hello, I'm <b style={{color: '#e31b6d'}}>Brandon McKenzie</b>.</p>
       <p>I'm a front-end web developer.</p>
       <Button
@@ -29,6 +31,7 @@ const Hero = () => {
         offHover={unHoverHandler}>
           View my work &nbsp; <i className="fas fa-arrow-right" id="arrow" style={arrowStyle}></i>
       </Button>
+      </Container>
     </header>
   )
 }

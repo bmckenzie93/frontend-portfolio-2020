@@ -1,0 +1,19 @@
+.Large {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.Small {
+  max-width: 40%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 750px) {
+  .Large {
+    max-width: 100%;
+  }
+
+  .Small {
+    max-width: 80%;
+  }
+}

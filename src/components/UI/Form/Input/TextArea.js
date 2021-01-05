@@ -8,7 +8,8 @@ const TextArea = props => {
       name="contactForm" 
       id="message" 
       cols="30" 
-      rows="10">
+      rows="8"
+      placeholder={props.placeholder}>
         
       {props.children}
     </textarea>

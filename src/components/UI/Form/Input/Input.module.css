@@ -1,3 +1,14 @@
 .Input {
   background-color: #1e242c;
+  color: #fff;
+  margin-bottom: .5rem;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.Submit {
+
 }
