@@ -18,7 +18,13 @@ const Contact = () => {
           title="contact"
           style={{color:'#fff'}} />
 
-        <p style={{textAlign: 'center', marginBottom: '2rem'}}>Have a question or want to work together?</p>
+        <p style={{
+          textAlign: 'center', 
+          marginBottom: '2rem',
+          color: '#04c2c9'}}>
+            
+            Have a question or want to work together?
+        </p>
 
         <Container size="Small">
           <Form 

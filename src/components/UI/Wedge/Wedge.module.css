@@ -1,5 +1,5 @@
 .Wedge {
-  border-top: 5rem solid #f4f4f4;
+  border-top: 5rem solid #f0f0f0;
   clip-path: polygon(0 0, 50% 100%, 100% 0%, 100% 0);
   transform: translateY(-1px);
   margin-bottom: 3rem;
