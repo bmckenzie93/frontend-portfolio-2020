@@ -1,10 +1,8 @@
 .img {
-  height: 100%;
-  background: no-repeat center center;
   width: 100%;
   min-height: fit-content;
 }
 
 .ProjectBody {
-  
+  background-color: #252934;
 }

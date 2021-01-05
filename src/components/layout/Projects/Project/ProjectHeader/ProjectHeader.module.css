@@ -1,8 +1,10 @@
 .ProjectHeader {
   width: 100%;
+  font-size: 1.3rem;
+  font-weight: bold;
   min-height: 2rem;
   align-items: center;
-  background-color: #04c2c9;
+  background-color: #252934;
   color: #fff;
   padding: .5rem;
 }
