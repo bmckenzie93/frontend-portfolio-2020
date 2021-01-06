@@ -37,7 +37,7 @@
   transition: all .3s ease-in;
 }
 
-.Info button {
+.Info a {
   padding: 1rem;
 }
 

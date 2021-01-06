@@ -3,3 +3,8 @@
   color: #fff;
   padding-bottom: 3rem;
 }
+
+.Contact input[type='submit'] {
+  width:fit-content;
+  margin-left: auto;
+}

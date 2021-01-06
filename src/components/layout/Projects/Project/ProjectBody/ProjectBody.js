@@ -1,6 +1,6 @@
 import React from 'react'
 import FlexWrap from '../../../../UI/Flex/FlexWrap'
-import Button from '../../../../UI/Button/Button'
+import Link from '../../../../UI/Button/Link'
 import styles from './ProjectBody.module.css'
 
 const ProjectBody = props => {
@@ -14,10 +14,11 @@ const ProjectBody = props => {
         <div className={styles.Info}>
           <p className={styles.Technologies}>{props.technologies}</p>
           <p className={styles.Description}>{props.description}</p>
+
           <FlexWrap>
-            <Button>Video</Button>
-            <Button>Website</Button>
-            <Button>GitHub</Button>
+            <Link video=''>Video</Link>
+            <Link href={props.website}>Website</Link>
+            <Link href={props.github}>GitHub</Link>
           </FlexWrap>
         </div>
     </div>

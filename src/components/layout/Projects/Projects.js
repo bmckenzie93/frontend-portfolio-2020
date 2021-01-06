@@ -24,7 +24,10 @@ const Projects = () => {
           description='
             Landing page for artists to sign up and share their story on the 
             " Immersed in Art Podcast " hosted by " Off The Wall Graffiti " 
-            non-profit organization.' />
+            non-profit organization.'
+          video=""
+          website="https://flamboyant-noether-04fe12.netlify.app"
+          github="https://github.com/bmckenzie93/immersedInArt" />
 
         <Project 
           title='Wild Water World'
@@ -33,7 +36,10 @@ const Projects = () => {
           description='
             Water park example website displaying fun images, 
             allowing people to sign up for team water games, 
-            and displaying a dynamic drink menu for the nightclub wet bar.' />
+            and displaying a dynamic drink menu for the nightclub wet bar.'
+          video=""
+          website="https://xenodochial-nobel-c567c4.netlify.app"
+          github="https://github.com/bmckenzie93/wild-water-world" />
 
       </Container>
     </section>

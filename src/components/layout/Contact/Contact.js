@@ -21,7 +21,8 @@ const Contact = () => {
         <p style={{
           textAlign: 'center', 
           marginBottom: '3rem',
-          color: '#04c2c9'}}>
+          color: '#04c2c9'
+        }}>
 
             Have a question or want to work together?
         </p>

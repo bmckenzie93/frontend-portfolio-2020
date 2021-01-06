@@ -12,7 +12,10 @@ const Project = props => {
         <ProjectBody 
           image={props.image}
           technologies={props.technologies}
-          description={props.description} />
+          description={props.description}
+          video={props.video}
+          website={props.website}
+          github={props.github} />
 
       </div>
     </div>
