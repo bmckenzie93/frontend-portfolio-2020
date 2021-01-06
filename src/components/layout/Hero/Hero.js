@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Hero.module.css'
-import Button from '../../UI/Button/Button'
+import Link from '../../UI/Button/Link'
 import Background from '../../../assets/digitalBG.mp4'
 import Container from '../../UI/Container/Container'
 
@@ -24,13 +24,13 @@ const Hero = () => {
         <source src={Background} type="video/mp4"/>
       </video>
       <Container size="Large">
-      <p>Hello, I'm <b style={{color: '#e31b6d'}}>Brandon McKenzie</b>.</p>
-      <p>I'm a front-end web developer.</p>
-      <Button
-        onHover={hoverHandler}
-        offHover={unHoverHandler}>
-          View my work &nbsp; <i className="fas fa-arrow-right" id="arrow" style={arrowStyle}></i>
-      </Button>
+        <p>Hello, I'm <b style={{color: '#e31b6d'}}>Brandon McKenzie</b>.</p>
+        <p>I'm a front-end web developer.</p>
+        <Link
+          onHover={hoverHandler}
+          offHover={unHoverHandler} >
+            View my work &nbsp; <i className="fas fa-arrow-right" id="arrow" style={arrowStyle}></i>
+        </Link>
       </Container>
     </header>
   )

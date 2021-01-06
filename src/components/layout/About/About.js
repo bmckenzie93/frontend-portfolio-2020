@@ -8,7 +8,10 @@ import Container from '../../UI/Container/Container'
 
 const About = () => {
   return (
-    <section className={styles.About}>
+    <section 
+      className={styles.About}
+      id='about' >
+        
       <Container size="Large">
         <Heading 
           title ='about'

@@ -1,0 +1,23 @@
+.Navbar {
+  background-color: #1b242f;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.Ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around; 
+  width: 100%;
+  min-height: 4rem;
+}
+
+.Ul a {
+  padding: 2rem;
+}
+
+.Ul li:hover {
+  background-color: #1e242c;
+  height: 100%;
+}

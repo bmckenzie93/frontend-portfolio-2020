@@ -12,7 +12,9 @@ import styles from './Contact.module.css'
 const Contact = () => {
   return (
     <>
-      <div className={styles.Contact}>
+      <section 
+        className={styles.Contact}
+        id='contact' >
       <Wedge />
         <Heading 
           title="contact"
@@ -54,7 +56,7 @@ const Contact = () => {
 
           </Form>
         </Container>
-      </div>
+      </section>
     </>
   )
 }
