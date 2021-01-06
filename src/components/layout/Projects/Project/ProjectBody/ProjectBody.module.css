@@ -5,4 +5,42 @@
 
 .ProjectBody {
   background-color: #252934;
+  position: relative;
+  min-height: 15rem;
+}
+
+.Technologies {
+  margin-bottom: .5rem;
+}
+
+.Description {
+  color: #fff;
+  font-size: .9rem;
+}
+
+.Info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  background-color: #1e242c;
+  color: #04c2c9;
+  /* overflow: hidden; */
+
+  opacity: 0;
+  transition: all .3s ease-in;
+}
+
+.Info button {
+  padding: 1rem;
+}
+
+.Info:hover {
+  opacity: 1;
 }

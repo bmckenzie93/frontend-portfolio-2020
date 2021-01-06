@@ -47,7 +47,7 @@ const About = () => {
             </div>
             <div className="card-text">
               <h3 style={{marginBottom: '1rem', color: '#e31b6d' }}>Deployment & Management</h3>
-              <p>I can get your website onto the internet and in front of the entire world.</p>
+              <p>Let's get your website onto the internet and in front of the entire world!</p>
             </div>
           </Card>
         </Flex>

@@ -7,8 +7,13 @@ const Project = props => {
   return (
     <div className={styles.Flex}>
       <div className={styles.Project}>
-        <ProjectHeader title={props.title}/>
-        <ProjectBody image={props.image}/>
+        <ProjectHeader title={props.title} />
+
+        <ProjectBody 
+          image={props.image}
+          technologies={props.technologies}
+          description={props.description} />
+
       </div>
     </div>
   )

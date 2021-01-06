@@ -18,12 +18,22 @@ const Projects = () => {
           color="#000" />
 
         <Project 
-          title='Wild Water World'
-          image={wild_water_world} />
+          title='Immersed in Art'
+          image={immersed_in_art}
+          technologies='Sass / Flexbox / PHP'
+          description='
+            Landing page for artists to sign up and share their story on the 
+            " Immersed in Art Podcast " hosted by " Off The Wall Graffiti " 
+            non-profit organization.' />
 
         <Project 
-          title='Immersed in Art'
-          image={immersed_in_art} />
+          title='Wild Water World'
+          image={wild_water_world}
+          technologies='Sass / Fetch API / Flexbox / Grid'
+          description='
+            Water park example website displaying fun images, 
+            allowing people to sign up for team water games, 
+            and displaying a dynamic drink menu for the nightclub wet bar.' />
 
       </Container>
     </section>
