@@ -6,8 +6,10 @@ const Link = props => {
     <a
       className={styles.Button}
       href={props.href} 
-      target="_blank" 
-      rel="external">
+      target={props.target} 
+      rel={props.rel}
+      onMouseEnter={props.onHover}
+      onMouseLeave={props.offHover} >
 
       {props.children}
     </a>

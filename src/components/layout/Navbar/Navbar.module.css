@@ -3,21 +3,35 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 3px solid #04c2c9;
 }
 
-.Ul {
-  display: flex;
+.NavbarUl {
   list-style: none;
-  justify-content: space-around; 
   width: 100%;
-  min-height: 4rem;
+  padding: .8rem;
 }
 
-.Ul a {
-  padding: 2rem;
+.NavbarLi {
+  display: inline;
 }
 
-.Ul li:hover {
+.NavbarA {
+  color: #fff;
+  margin: 0 1.1rem;
+  font-weight: 200;
+  transition: color .5s ease;
+}
+
+.NavbarLi:hover {
   background-color: #1e242c;
   height: 100%;
+}
+
+.NavbarA:hover {
+  color: #e31b6d;
+}
+
+.Active {
+  color: #e31b6d;
 }

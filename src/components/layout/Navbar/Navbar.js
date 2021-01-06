@@ -4,10 +4,39 @@ import styles from './Navbar.module.css'
 const Navbar = () => {
   return (
     <nav className={styles.Navbar}>
-      <ul className={styles.Ul}>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <ul className={styles.NavbarUl}>
+
+        <li className={styles.NavbarLi}>
+          <a
+            className={styles.NavbarA} 
+            href="#hero">
+              HOME
+          </a>
+        </li>
+
+        <li className={styles.NavbarLi}>
+          <a
+            className={styles.NavbarA} 
+            href="#about">
+              ABOUT
+          </a>
+        </li>
+
+        <li className={styles.NavbarLi}>
+          <a 
+            className={styles.NavbarA}
+            href="#projects">
+              PROJECTS
+          </a>
+        </li>
+
+        <li className={styles.NavbarLi}>
+          <a
+            className={styles.NavbarA} 
+            href="#contact">
+              CONTACT
+          </a>
+        </li>
       </ul>
     </nav>
   )

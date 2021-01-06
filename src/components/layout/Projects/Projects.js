@@ -11,7 +11,9 @@ import Container from '../../UI/Container/Container'
 
 const Projects = () => {
   return (
-    <section className={styles.Projects}>
+    <section 
+      className={styles.Projects}
+      id="projects" >
       <Container size="Large">
         <Heading 
           title="projects"

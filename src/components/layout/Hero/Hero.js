@@ -19,16 +19,22 @@ const Hero = () => {
   }
 
   return (
-    <header className={styles.Hero}>
+    <header 
+      className={styles.Hero}
+      id="hero" >
+
       <video autoPlay loop muted className={styles.Video}>
         <source src={Background} type="video/mp4"/>
       </video>
+      
       <Container size="Large">
         <p>Hello, I'm <b style={{color: '#e31b6d'}}>Brandon McKenzie</b>.</p>
         <p>I'm a front-end web developer.</p>
         <Link
           onHover={hoverHandler}
-          offHover={unHoverHandler} >
+          offHover={unHoverHandler}
+          href={'#about'}
+          target={''} >
             View my work &nbsp; <i className="fas fa-arrow-right" id="arrow" style={arrowStyle}></i>
         </Link>
       </Container>

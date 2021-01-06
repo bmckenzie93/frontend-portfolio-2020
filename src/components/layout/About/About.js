@@ -19,7 +19,7 @@ const About = () => {
 
         <h1 style={{ fontWeight: 'lighter', marginBottom: '3rem' }}>
           I love to design and code responsive websites and web applications.
-          <br/><a href="#">Let's make something special.</a>
+          <br/><a href="#contact">Let's make something special.</a>
         </h1>
 
         <Flex>
