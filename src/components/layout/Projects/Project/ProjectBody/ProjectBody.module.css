@@ -6,16 +6,29 @@
 .ProjectBody {
   background-color: #252934;
   position: relative;
-  min-height: 15rem;
+  min-height: 17rem;
+  overflow: hidden;
 }
 
 .Technologies {
   margin-bottom: .5rem;
+  
+  transform: translateY(-2rem);
+  opacity: 0;
 }
 
 .Description {
   color: #fff;
   font-size: .9rem;
+  
+  transform: translateX(-2rem);
+  opacity: 0;
+}
+
+.CTA {
+  transform: translatey(2rem);
+  opacity: 0;
+
 }
 
 .Info {
@@ -23,7 +36,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem 2rem;
   top: 0;
   left: 0;
   width: 100%;
@@ -31,8 +44,7 @@
   z-index: 20;
   background-color: #1e242c;
   color: #04c2c9;
-  /* overflow: hidden; */
-
+  
   opacity: 0;
   transition: all .3s ease-in;
 }
@@ -43,4 +55,22 @@
 
 .Info:hover {
   opacity: 1;
+}
+
+.Info:hover .Technologies {
+  transition: all .4s ease-in;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Info:hover .Description {
+  transition: all .4s ease-in;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.Info:hover .CTA {
+  transition: all .4s ease-in;
+  opacity: 1;
+  transform: translateY(0);
 }

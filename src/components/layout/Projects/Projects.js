@@ -5,6 +5,8 @@ import styles from './Projects.module.css'
 
 import immersed_in_art from '../../../assets/immersed_in_art.png'
 import wild_water_world from '../../../assets/wild_water_world.png'
+import eugene_food_scene from '../../../assets/eugene_food_scene.png'
+import little_help_book from '../../../assets/little_help_book.png'
 import Container from '../../UI/Container/Container'
 
 
@@ -18,6 +20,19 @@ const Projects = () => {
         <Heading 
           title="projects"
           color="#000" />
+
+          <Project 
+          title='Eugene Food Scene'
+          image={eugene_food_scene}
+          technologies='Blazorise / Flexbox / Grid'
+          description='
+            Eugene Food Scene is a COVID Recovery Food locating app
+            with aspirations to include food sources and networks beyond 
+            restaurant delivery and take-out. 
+            This is an Open Eugene project and part of the Code for America network.'
+          video=""
+          website="http://eugenefoodscene.com"
+          github="https://github.com/bmckenzie93/eugene-food-scene/blob/develop/EugeneFoodScene/wwwroot/css/site.css" />
 
         <Project 
           title='Immersed in Art'
@@ -42,6 +57,19 @@ const Projects = () => {
           video=""
           website="https://xenodochial-nobel-c567c4.netlify.app"
           github="https://github.com/bmckenzie93/wild-water-world" />
+
+        <Project 
+          title='Little Help Book'
+          image={little_help_book}
+          technologies='Sass / Flexbox'
+          description='
+            Little Help Book is a COVID Recovery resource discovery app 
+            working with local agencies to make it easier for at-risk populations 
+            to find the resources they need.
+            This is an Open Eugene project and part of the Code for America network.'
+          video=""
+          website="https://littlehelpbook.com/"
+          github="https://github.com/OpenEugene/little-help-book-web" />
 
       </Container>
     </section>

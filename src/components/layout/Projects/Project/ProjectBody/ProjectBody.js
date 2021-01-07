@@ -15,11 +15,26 @@ const ProjectBody = props => {
           <p className={styles.Technologies}>{props.technologies}</p>
           <p className={styles.Description}>{props.description}</p>
 
-          <FlexWrap>
-            <Link video=''>Video</Link>
-            <Link href={props.website}>Website</Link>
-            <Link href={props.github}>GitHub</Link>
-          </FlexWrap>
+          <div className={styles.CTA}>
+            <FlexWrap>
+              <Link 
+                video=''>
+                  Video
+              </Link>
+              <Link 
+                href={props.website}
+                target='_blank'
+                rel='external' >
+                  Website
+              </Link>
+              <Link 
+                href={props.github}
+                target='_blank'
+                rel='external' >
+                  GitHub
+              </Link>
+            </FlexWrap>
+          </div>
         </div>
     </div>
   )
