@@ -12,7 +12,8 @@ const Navbar = () => {
             className={styles.NavbarA} 
             to="hero"
             smooth={true}
-            duration={1000} >
+            duration={1000}
+            style={{cursor: 'pointer'}} >
               HOME
           </Link>
         </li>
@@ -23,7 +24,8 @@ const Navbar = () => {
             to="about"
             smooth={true}
             duration={1000}
-            offset={-47.59} >
+            offset={-47.59}
+            style={{cursor: 'pointer'}} >
               ABOUT
           </Link>
         </li>
@@ -34,7 +36,8 @@ const Navbar = () => {
             to="projects"
             smooth={true}
             duration={1000}
-            offset={-47.59} >
+            offset={-47.59}
+            style={{cursor: 'pointer'}} >
               PROJECTS
           </Link>
         </li>
@@ -45,7 +48,7 @@ const Navbar = () => {
             to="contact"
             smooth={true}
             duration={1000}
-            offset={-47.59} >
+            style={{cursor: 'pointer'}} >
               CONTACT
           </Link>
         </li>

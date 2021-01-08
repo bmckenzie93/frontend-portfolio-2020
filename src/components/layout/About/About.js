@@ -5,6 +5,7 @@ import Flex from '../../UI/Flex/Flex'
 import FlexWrap from '../../UI/Flex/FlexWrap'
 import Heading from '../../UI/Heading/Heading'
 import Container from '../../UI/Container/Container'
+import { Link } from 'react-scroll'
 
 const About = () => {
   return (
@@ -19,7 +20,15 @@ const About = () => {
 
         <h1 style={{ fontWeight: 'lighter', marginBottom: '3rem' }}>
           I love to design and code responsive websites and web applications.
-          <br/><a href="#contact">Let's make something special.</a>
+          <br/>
+          <Link 
+            to="contact"
+            smooth={true}
+            duration={1000}
+            offset={-47.59}
+            style={{cursor: 'pointer'}} >
+            Let's make something special.
+          </Link>
         </h1>
 
         <Flex>
