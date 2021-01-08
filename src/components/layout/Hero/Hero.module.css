@@ -31,3 +31,29 @@
   object-fit: cover;
   z-index: -1;
 }
+
+.Button {
+  border: 2px solid #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  transition: all .5s;
+  outline: none;
+  color: #fff;
+  background-color: transparent;
+}
+
+  .Button:hover{
+    background-color: #04c2c9;
+    border: 2px solid #04c2c9;
+  }
+
+  .LinkDiv {
+    width: fit-content;
+    margin: auto;
+  }
+
+  .LinkDiv:hover a i {
+    transform: rotate(90deg);
+  }

@@ -6,3 +6,18 @@
   font-size: .8rem;
   padding: 3rem 0;
 }
+
+.ScrollUp {
+  background-color: #e31b6d;
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  position: absolute;
+  top: -1.5rem;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.ScrollUp:hover {
+  background-color: #b11355;
+}

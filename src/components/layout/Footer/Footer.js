@@ -7,6 +7,12 @@ const Footer = () => {
 
   return (
     <footer className={styles.Footer}>
+      <div className={styles.ScrollUp}>
+        <i class="fas fa-angle-double-up fa-2x" style={{
+          paddingTop: '10px',
+          color: '#fff'
+        }}></i>
+      </div>
       <p>BRANDON MCKENZIE<span style={{color: '#e31b6d'}}>&copy;{year}</span></p>
     </footer>
   )

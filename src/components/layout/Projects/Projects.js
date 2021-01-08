@@ -26,7 +26,7 @@ const Projects = () => {
           image={eugene_food_scene}
           technologies='Blazorise / Flexbox / Grid'
           description='
-            Eugene Food Scene is a COVID Recovery Food locating app
+            A COVID-19 recovery food locating app
             with aspirations to include food sources and networks beyond 
             restaurant delivery and take-out. 
             This is an Open Eugene project and part of the Code for America network.'
@@ -63,7 +63,7 @@ const Projects = () => {
           image={little_help_book}
           technologies='Sass / Flexbox'
           description='
-            Little Help Book is a COVID Recovery resource discovery app 
+            A COVID-19 recovery resource discovery app 
             working with local agencies to make it easier for at-risk populations 
             to find the resources they need.
             This is an Open Eugene project and part of the Code for America network.'
