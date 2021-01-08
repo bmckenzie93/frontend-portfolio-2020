@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Navbar.module.css'
+import { Link } from 'react-scroll'
 
 const Navbar = () => {
   return (
@@ -7,35 +8,46 @@ const Navbar = () => {
       <ul className={styles.NavbarUl}>
 
         <li className={styles.NavbarLi}>
-          <a
+          <Link
             className={styles.NavbarA} 
-            href="#hero">
+            to="hero"
+            smooth={true}
+            duration={1000} >
               HOME
-          </a>
+          </Link>
         </li>
 
         <li className={styles.NavbarLi}>
-          <a
+          <Link
             className={styles.NavbarA} 
-            href="#about">
+            to="about"
+            smooth={true}
+            duration={1000}
+            offset={-47.59} >
               ABOUT
-          </a>
+          </Link>
         </li>
 
         <li className={styles.NavbarLi}>
-          <a 
+          <Link 
             className={styles.NavbarA}
-            href="#projects">
+            to="projects"
+            smooth={true}
+            duration={1000}
+            offset={-47.59} >
               PROJECTS
-          </a>
+          </Link>
         </li>
 
         <li className={styles.NavbarLi}>
-          <a
+          <Link
             className={styles.NavbarA} 
-            href="#contact">
+            to="contact"
+            smooth={true}
+            duration={1000}
+            offset={-47.59} >
               CONTACT
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
