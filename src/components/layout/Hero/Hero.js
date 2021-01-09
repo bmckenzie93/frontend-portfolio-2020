@@ -16,7 +16,7 @@ const Hero = () => {
     // P1
     TweenMax.from(
       p1,
-      1.5,
+      2,
       {
         opacity: 0,
         x: -60,
@@ -27,7 +27,7 @@ const Hero = () => {
     // P2
     TweenMax.from(
       p2,
-      1.5,
+      2,
       {
         opacity: 0,
         x: 60,
@@ -39,7 +39,7 @@ const Hero = () => {
     // CTA
     TweenMax.from(
       cta,
-      1.5,
+      2,
       {
         opacity: 0,
         y: 60,

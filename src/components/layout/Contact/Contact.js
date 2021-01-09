@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from '../../UI/Button/Button'
 import Container from '../../UI/Container/Container'
 import Form from '../../UI/Form/Form'
 import Input from '../../UI/Form/Input/Input'
@@ -9,7 +8,21 @@ import Heading from '../../UI/Heading/Heading'
 import Wedge from '../../UI/Wedge/Wedge'
 import styles from './Contact.module.css'
 
+import * as emailjs from 'emailjs-com'
+
 const Contact = () => {
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('gmail', 'portfolio_template', '#contactForm', 'user_k4ld27wqjmbJxvHYci9cB')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    e.target.reset();
+  }
+
   return (
     <>
       <section 
@@ -31,23 +44,23 @@ const Contact = () => {
 
         <Container size="Small">
           <Form 
-            action=''
+            onSubmit={sendEmail}
             id='contactForm'>
 
             <Input 
               type="text"
-              name="contactForm"
+              name="name"
               id="name"
               placeholder="Name" />
 
             <Input 
               type="email"
-              name="contactForm"
+              name="email"
               id="email"
               placeholder="Enter Email" />
 
             <TextArea
-              name="contactForm"
+              name="message"
               id="message"
               placeholder="Your Message">
             </TextArea>

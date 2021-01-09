@@ -5,8 +5,8 @@ const TextArea = props => {
   return (
     <textarea 
       className={styles.Input}
-      name="contactForm" 
-      id="message" 
+      name={props.name} 
+      id={props.id} 
       cols="30" 
       rows="8"
       placeholder={props.placeholder}>

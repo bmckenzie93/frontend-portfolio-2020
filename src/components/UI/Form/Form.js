@@ -4,7 +4,7 @@ import styles from './Form.module.css'
 const Form = props => {
   return (
     <form 
-      action={props.action}
+      onSubmit={props.onSubmit}
       id={props.id}
       className={styles.Form}>
         
