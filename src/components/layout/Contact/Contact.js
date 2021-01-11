@@ -11,6 +11,7 @@ import styles from './Contact.module.css'
 import * as emailjs from 'emailjs-com'
 
 const Contact = () => {
+  // EMAIL JS
   function sendEmail(e) {
     e.preventDefault();
 
@@ -22,6 +23,19 @@ const Contact = () => {
       });
     e.target.reset();
   }
+
+  // FORM VALIDATION
+  const validateInput = (e) => {
+
+    if(document.getElementById('name').value === '') {
+      alert('Please enter your name')
+    } else if(document.getElementById('email').value === '') {
+      alert('Please enter your email')
+    } else if(document.getElementById('message').value === '') {
+      alert('Please enter a message')
+    } else(sendEmail(e))
+  }
+
 
   return (
     <>
@@ -65,7 +79,8 @@ const Contact = () => {
               placeholder="Your Message">
             </TextArea>
 
-            <Submit />
+            <Submit
+              onClick={validateInput} />
 
           </Form>
         </Container>
