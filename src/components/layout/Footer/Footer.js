@@ -10,37 +10,63 @@ const Footer = () => {
   // Get current year
   const year = new Date().getUTCFullYear();
 
+  const iconClasses = (icon) => {
+    return(`
+      fab fa-2x fa-${icon} ${styles.FooterIcon}
+    `)
+  }
+
+  const dlResumeIcon = (icon) => {
+    return(`
+      fas fa-3x fa-${icon} ${styles.ResumeIcon}
+    `)
+  }
+
   return (
     <footer className={styles.Footer}>
-        <Container size="Large">
+        <Container size="Small">
         {/* Scroll to top */}
         <div 
           className={styles.ScrollUp}
           onClick={()=>Scroll.scrollToTop()} >
           <i className="fas fa-angle-double-up fa-2x" style={{
-            paddingTop: '10px',
+            paddingTop: '14px',
             color: '#fff'
           }}></i>
         </div>
 
         {/* Footer Icons */}
-        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+        <div className={styles.FooterIcons}>
           <div>
             {/* LinkedIn */}
-            <a href="https://www.lhttps//www.linkedin.com/in/bmckenzie93/" target="_blank">
-              <i style={{padding: '1rem', backgroundColor: '#262f38'}} className="fab fa-2x fa-linkedin-in"></i>
+            <a 
+              href="https://www.linkedin.com/in/bmckenzie93/" 
+              target="_blank" 
+              className={styles.FooterLink}
+              rel='external' >
+                <i className={iconClasses('linkedin-in')}></i>
             </a>
             {/* GitHub */}
-            <a href="https://github.com/bmckenzie93" target="_blank">
-              <i style={{padding: '1rem', backgroundColor: '#262f38', marginLeft: '1rem'}} className="fab fa-2x fa-github"></i>
+            <a 
+              href="https://www.github.com/bmckenzie93" 
+              target="_blank" 
+              className={styles.FooterLink}
+              rel='external' >
+                <i className={iconClasses('github')}></i>
             </a>
           </div>
 
           {/* Download Resume */}
-          <a href={Resume} download>
-            <i style={{padding: '.5rem'}} className="fas fa-3x fa-file-download"></i>
-            <span style={{display: 'flex'}}>Download Resume</span>
-          </a>
+          <div className={styles.ResumeIcon}>
+            <a 
+              href={Resume} 
+              download 
+              style={{color: '#fff'}} >
+                
+              <i style={{padding: '.5rem'}} className="fas fa-3x fa-file-download"></i>
+              <span style={{display: 'flex'}}>Download Resume</span>
+            </a>
+          </div>
         </div>
 
         <p>BRANDON MCKENZIE<span style={{color: '#e31b6d'}}>&copy;{year}</span></p>
