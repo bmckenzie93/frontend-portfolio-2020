@@ -61,6 +61,7 @@ const Contact = () => {
     let email = emailState.value;
     let message = messageState.value;
 
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
     if(name === '') {
       setNameState({
@@ -69,6 +70,11 @@ const Contact = () => {
       })
       return
     } else if(email === '') {
+      setEmailState({
+        value: email,
+        error: true
+      })
+    } else if(!re.test(email)) {
       setEmailState({
         value: email,
         error: true
