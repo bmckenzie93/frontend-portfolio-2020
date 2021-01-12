@@ -16,15 +16,10 @@ const Footer = () => {
     `)
   }
 
-  const dlResumeIcon = (icon) => {
-    return(`
-      fas fa-3x fa-${icon} ${styles.ResumeIcon}
-    `)
-  }
 
   return (
     <footer className={styles.Footer}>
-        <Container size="Small">
+      <Container size="Small">
         {/* Scroll to top */}
         <div 
           className={styles.ScrollUp}
@@ -43,7 +38,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/bmckenzie93/" 
               target="_blank" 
               className={styles.FooterLink}
-              rel='external' >
+              rel='noreferrer' >
                 <i className={iconClasses('linkedin-in')}></i>
             </a>
             {/* GitHub */}
@@ -51,7 +46,7 @@ const Footer = () => {
               href="https://www.github.com/bmckenzie93" 
               target="_blank" 
               className={styles.FooterLink}
-              rel='external' >
+              rel='noreferrer' >
                 <i className={iconClasses('github')}></i>
             </a>
           </div>

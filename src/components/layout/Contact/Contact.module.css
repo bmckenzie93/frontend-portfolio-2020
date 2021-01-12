@@ -8,3 +8,15 @@
   width:fit-content;
   margin-left: auto;
 }
+
+.ErrorMessage {
+  margin-bottom: .5rem;
+  text-align: right;
+}
+
+.SuccessMessage {
+  background-color: green;
+  color: #fff;
+  margin-bottom: .5rem;
+  padding: 1rem;
+}

@@ -24,13 +24,13 @@ const ProjectBody = props => {
               <Link 
                 href={props.website}
                 target='_blank'
-                rel='external' >
+                rel='noreferrer' >
                   Website
               </Link>
               <Link 
                 href={props.github}
                 target='_blank'
-                rel='external' >
+                rel='noreferrer' >
                   GitHub
               </Link>
             </FlexWrap>

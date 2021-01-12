@@ -9,7 +9,10 @@ const TextArea = props => {
       id={props.id} 
       cols="30" 
       rows="8"
-      placeholder={props.placeholder}>
+      placeholder={props.placeholder}
+      value={props.value}
+      style={props.style}
+      onChange={props.handleChange} >
         
       {props.children}
     </textarea>
