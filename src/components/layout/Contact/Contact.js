@@ -61,11 +61,13 @@ const Contact = () => {
     let email = emailState.value;
     let message = messageState.value;
 
+
     if(name === '') {
       setNameState({
         value: name,
         error: true
       })
+      return
     } else if(email === '') {
       setEmailState({
         value: email,
@@ -78,11 +80,7 @@ const Contact = () => {
       })
     }
 
-    name = nameState.value;
-    email = emailState.value;
-    message = messageState.value;
-
-    if(nameState.error === false && emailState.error === false && messageState.error === false) {
+    if(nameState.value !== '' && emailState.value !== '' && messageState.value !== '') {
         sendEmail()
       }
   }
@@ -97,7 +95,9 @@ const Contact = () => {
       });
 
     setSuccessState(true)
-
+    setNameState({value: ''})
+    setEmailState({value: ''})
+    setMessageState({value: ''})
   }
 
   return (
@@ -171,7 +171,9 @@ const Contact = () => {
             
             {successState ? 
             <div className={styles.SuccessMessage}>Your message has been sent!</div> : null}
-            <Submit />
+            {!successState ?
+            <Submit /> : null}
+            
 
           </Form>
         </Container>

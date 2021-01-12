@@ -7,7 +7,8 @@ const Submit = props => {
       className={styles.Button}
       type="submit" 
       value="submit"
-      onClick={props.onClick} />
+      onClick={props.onClick}
+      disabled={props.disabled} />
   )
 }
 
