@@ -50,7 +50,7 @@ const Hero = () => {
   }, [])
 
   return (
-    <header 
+    <section 
       className={styles.Hero}
       id="hero" >
 
@@ -74,13 +74,13 @@ const Hero = () => {
             to='about'
             smooth={true}
             duration={1000}
-            offset={-47.59}
+            offset={-46}
             target={''} >
               View my work &nbsp; <i className="fas fa-arrow-right" style={{transition: 'all .5s ease'}}></i>
           </Link>
         </div>
       </Container>
-    </header>
+    </section>
   )
 }
 
