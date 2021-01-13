@@ -25,7 +25,7 @@ const About = () => {
             to="contact"
             smooth={true}
             duration={1000}
-            offset={-47.59}
+            offset={-47}
             style={{cursor: 'pointer'}} >
             Let's make something special.
           </Link>

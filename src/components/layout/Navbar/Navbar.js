@@ -32,7 +32,7 @@ const Navbar = () => {
     }
   }
   
-  window.addEventListener('scroll', throttle(findActive, 300))
+  window.addEventListener('scroll', throttle(findActive, 10))
   
   return (
     <nav className={styles.Navbar}>
@@ -55,7 +55,7 @@ const Navbar = () => {
               to="about"
               smooth={true}
               duration={1000}
-              offset={0} >
+              offset={-47} >
                 ABOUT
             </Link>
           </li>
