@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import styles from './Hero.module.css'
+import styles from './Home.module.css'
 import Background from '../../../assets/digitalBG.mp4'
 import Container from '../../UI/Container/Container'
 
@@ -7,7 +7,7 @@ import { Link } from 'react-scroll'
 import { TweenMax, Power3 } from 'gsap'
 
 
-const Hero = () => {
+const Home = () => {
   let p1 = useRef(null);
   let p2 = useRef(null);
   let cta = useRef(null);
@@ -52,7 +52,7 @@ const Hero = () => {
   return (
     <section 
       className={styles.Hero}
-      id="hero" >
+      id="home" >
 
       <video autoPlay loop muted className={styles.Video}>
         <source src={Background} type="video/mp4"/>
@@ -84,4 +84,4 @@ const Hero = () => {
   )
 }
 
-export default Hero;
+export default Home;

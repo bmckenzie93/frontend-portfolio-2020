@@ -5,14 +5,11 @@ import { Link } from 'react-scroll'
 
 const Navbar = () => {
   const findActive = (e) => {
-    let navLinks = document.querySelectorAll('nav ul li a');
-
+    let navLinks = document.querySelectorAll('nav ul li a')
     let fromTop = window.scrollY
 
     navLinks.forEach(link => {
-      console.log(link)
       let section = document.querySelector(`section#${link.innerHTML.toLocaleLowerCase()}`)
-      console.log(section)
 
       if(
         section.offsetTop <= fromTop + 47.9 &&
@@ -24,8 +21,18 @@ const Navbar = () => {
       }
     })
   }
+
+  const throttle = (fn, wait) => {
+    var time = Date.now();
+    return () => {
+      if ((time + wait - Date.now()) < 0) {
+        fn();
+        time = Date.now();
+      }
+    }
+  }
   
-  window.addEventListener('scroll', findActive)
+  window.addEventListener('scroll', throttle(findActive, 300))
   
   return (
     <nav className={styles.Navbar}>
@@ -35,10 +42,10 @@ const Navbar = () => {
           <li className={styles.NavbarLi}>
             <Link
               className={styles.NavbarA}
-              to="hero"
+              to="home"
               smooth={true}
               duration={1000} >
-                HERO
+                HOME
             </Link>
           </li>
 
