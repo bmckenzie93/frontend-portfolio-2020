@@ -3,8 +3,10 @@ import styles from './Flex.module.css'
 
 const Flex = props => {
   return (
-    <div className={styles.Flex}>
-      {props.children}
+    <div 
+      className={styles.Flex}
+      id={props.id} >
+        {props.children}
     </div>
   )
 }

@@ -26,7 +26,7 @@
 }
 
 .ResumeIcon:hover {
-  transition: .5s ease all;
+  transition: all .5s ease-out ;
   transform: scale(1.1);
 }
 
@@ -47,5 +47,5 @@
 }
 
 .ScrollUp:hover {
-  background-color: #b11355;
+  background-color: #fc1f7b;
 }

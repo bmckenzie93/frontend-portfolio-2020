@@ -74,3 +74,28 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 550px) {
+  .ProjectBody {
+    min-height: 33rem;
+  }
+
+  .Info {
+    opacity: 1;
+  }
+
+  .Technologies {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .Description {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .CTA {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

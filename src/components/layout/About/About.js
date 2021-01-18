@@ -1,13 +1,87 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './About.module.css'
 import Card from '../../UI/Card/Card'
 import Flex from '../../UI/Flex/Flex'
 import FlexWrap from '../../UI/Flex/FlexWrap'
 import Heading from '../../UI/Heading/Heading'
 import Container from '../../UI/Container/Container'
+
 import { Link } from 'react-scroll'
 
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
+
 const About = () => {
+  
+  // SCROLL TRIGGER
+  useEffect(() => {
+    // Heading
+    gsap.from('#heading', {
+      scrollTrigger: {
+        trigger: '#heading',
+        toggleActions: 'play',
+        start: 'top 80%',
+      },
+        duration: 1,
+        opacity: 0,
+        y: -60,
+        ease: 'ease-in'
+      },
+    )
+
+    // Description
+    gsap.from('#description', {
+      scrollTrigger: {
+        trigger: '#description',
+        toggleActions: 'play',
+        start: 'top 80%',
+      },
+        duration: 1,
+        opacity: 0,
+        x: -60,
+        ease: 'ease-in'
+      },
+    )
+
+    // Cards
+    gsap.from('.card', {
+      scrollTrigger: {
+        trigger: '.card',
+        toggleActions: 'play',
+        start: 'top 80%',
+      },
+        duration: 1,
+        delay: .1,
+        stagger: .2,
+        opacity: 0,
+        x: 60,
+        ease: 'ease'
+      },
+    )
+
+    // Technology Icons
+    gsap.from('.tech', {
+      scrollTrigger: {
+        trigger: '.tech',
+        toggleActions: 'play',
+      },
+        duration: 1,
+        delay: .1,
+        stagger: .1,
+        opacity: 0,
+        x: -60,
+        ease: 'ease-in'
+      },
+    )
+  }, [])
+
+  const iconStyle = (icon) => {
+    return `
+      tech fab fa-4x fa-${icon} ${styles.Tech}
+    `
+  }
+
   return (
     <section 
       className={styles.About}
@@ -16,9 +90,10 @@ const About = () => {
       <Container size="Large">
         <Heading 
           title ='about'
-          color='#000' />
+          color='#000'
+          id="heading" />
 
-        <h1 style={{ fontWeight: 'lighter', marginBottom: '3rem' }}>
+        <h1 style={{ fontWeight: 'lighter', marginBottom: '3rem' }} id="description">
           I love to design and code responsive websites and web applications.
           <br/>
           <Link 
@@ -31,8 +106,8 @@ const About = () => {
           </Link>
         </h1>
 
-        <Flex>
-          <Card>
+        <Flex id="cards">
+          <Card className="card">
             <div className="card-icon">
               <div className="fas fa-mobile-alt fa-4x"></div>
             </div>
@@ -65,15 +140,15 @@ const About = () => {
         </Flex>
 
         <FlexWrap>
-        <i style={{padding: '2rem'}} className="fab fa-4x fa-react"></i>
-        <i style={{padding: '2rem'}} className="fab fa-4x fa-css3-alt"></i>
-        <i style={{padding: '2rem'}} className="fab fa-4x fa-js-square"></i>
-        <i style={{padding: '2rem'}} className="fab fa-4x fa-html5"></i>
-        <i style={{padding: '2rem'}} className="fab fa-4x fa-sass"></i>
-        <i style={{padding: '2rem'}} className="fab fa-4x fa-bootstrap"></i>
-        <i style={{padding: '2rem'}} className="fab fa-4x fa-wordpress"></i>
-        <i style={{padding: '2rem'}} className="fab fa-4x fa-github-square"></i>
-        <i style={{padding: '2rem'}} className="fab fa-4x fa-npm"></i>
+          <i className={iconStyle("react")}></i>
+          <i className={iconStyle("css3-alt")}></i>
+          <i className={iconStyle("js-square")}></i>
+          <i className={iconStyle("html5")}></i>
+          <i className={iconStyle("sass")}></i>
+          <i className={iconStyle("bootstrap")}></i>
+          <i className={iconStyle("wordpress")}></i>
+          <i className={iconStyle("github-square")}></i>
+          <i className={iconStyle("npm")}></i>
         </FlexWrap>
       </Container>
 

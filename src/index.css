@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   line-height: 1.4;
@@ -20,4 +24,9 @@ a {
 
 .active {
   color: #e31b6d !important;
+}
+
+.show {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
 }

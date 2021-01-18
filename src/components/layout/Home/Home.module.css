@@ -12,16 +12,6 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-  @media only screen and (max-width: 750px) {
-    .Hero {
-      font-size: 1.5rem;
-      line-height: 2;
-      letter-spacing: 0px;
-      padding: 1rem;
-    }
-  }
-
-
 .Video {
   position: absolute;
   width: 100%;
@@ -42,6 +32,7 @@
   outline: none;
   color: #fff;
   background-color: transparent;
+  margin-top: 2rem;
 }
 
   .Button:hover{
@@ -56,4 +47,13 @@
 
   .LinkDiv:hover a i {
     transform: rotate(90deg);
+  }
+
+  @media (max-width: 750px) {
+    .Hero {
+      font-size: 1.5rem;
+      line-height: 2;
+      letter-spacing: 0px;
+      padding: 1rem;
+    }
   }

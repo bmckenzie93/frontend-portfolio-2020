@@ -11,7 +11,8 @@ const Link = props => {
       rel={props.rel}
       onMouseEnter={props.onHover}
       onMouseLeave={props.offHover}
-      style={props.style} >
+      style={props.style}
+      onClick={props.onClick} >
 
       {props.children}
     </a>

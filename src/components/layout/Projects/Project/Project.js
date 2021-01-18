@@ -3,9 +3,16 @@ import styles from './Project.module.css'
 import ProjectBody from './ProjectBody/ProjectBody'
 import ProjectHeader from './ProjectHeader/ProjectHeader'
 
+
 const Project = props => {
+  
+  const className = () => {
+    return `
+    ${props.className} ${styles.Flex}
+    `
+  }
   return (
-    <div className={styles.Flex}>
+    <div className={ className() }>
       <div className={styles.Project}>
         <ProjectHeader title={props.title} />
 
@@ -15,7 +22,8 @@ const Project = props => {
           description={props.description}
           video={props.video}
           website={props.website}
-          github={props.github} />
+          github={props.github}
+          className={props.className} />
 
       </div>
     </div>

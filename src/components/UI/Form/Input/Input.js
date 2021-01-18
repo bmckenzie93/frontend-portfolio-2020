@@ -1,10 +1,18 @@
 import React from 'react'
 import styles from './Input.module.css'
 
+
 const Input = props => {
+  
+  const className = () => {
+    return`
+    ${props.className} ${styles.Input}
+    `
+  }
+
   return (
     <input 
-      className={styles.Input}
+      className={ className() }
       name={props.name}
       id={props.id}
       type={props.type}

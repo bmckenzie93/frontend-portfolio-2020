@@ -1,6 +1,10 @@
 .Large {
-  max-width: 80%;
+  width: 80%;
+  max-width: 1600px;
   margin: 0 auto;
+  position: relative;
+  
+  transition: all .5s ease;
 }
 
 .Small {

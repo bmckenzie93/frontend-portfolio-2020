@@ -12,24 +12,22 @@
 }
 
 .Card:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
   border: 2px solid #04c2c9;
 }
 
-@media screen and (max-width: 1100px) {
+@media (max-width: 1100px) {
     .Card {
       padding: 1rem;
     }
   }
 
-@media screen and (max-width: 750px) {
-  .Card {
-    margin: 1rem auto;
-    max-width: 80%;
-  }
-}  
+@media (max-width: 750px) {
+    .Card {
+      margin-bottom: 2rem;
+      max-width: 100%;
+    }
 
-  @media screen and (max-width: 750px) {
     .Card:hover {
       transform: scale(1.1);
     }

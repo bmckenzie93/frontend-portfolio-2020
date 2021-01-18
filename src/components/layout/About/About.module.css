@@ -4,3 +4,18 @@
   color: #000;
 }
 
+.Tech {
+  padding: 2rem;
+}
+
+@media (max-width: 720px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .Tech {
+    padding: 1rem;
+    font-size: 3rem;
+  }
+}
+

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Container from '../../UI/Container/Container'
 import Form from '../../UI/Form/Form'
 import Input from '../../UI/Form/Input/Input'
@@ -9,6 +9,10 @@ import Wedge from '../../UI/Wedge/Wedge'
 import styles from './Contact.module.css'
 
 import * as emailjs from 'emailjs-com'
+
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 
 const Contact = () => {
   // Name State
@@ -106,6 +110,54 @@ const Contact = () => {
     setMessageState({value: ''})
   }
 
+  // SCROLL ANIMATIONS
+  useEffect(() => {
+    // Heading
+    gsap.from('#contactHeading', {
+      scrollTrigger: {
+        trigger: '#contactHeading',
+        toggleActions: 'play',
+        start: 'top 80%',
+      },
+        duration: 1,
+        opacity: 0,
+        y: -60,
+        ease: 'ease-in'
+      },
+    )
+
+    // Description
+    gsap.from('.description', {
+      scrollTrigger: {
+        trigger: '.description',
+        toggleActions: 'play',
+        start: 'top 80%',
+      },
+        duration: 1,
+        opacity: 0,
+        y: 60,
+        ease: 'ease-in'
+      },
+    )
+
+
+    // Form Inputs
+    gsap.from('.input', {
+      scrollTrigger: {
+        trigger: '.input',
+        toggleActions: 'play',
+        start: 'top 80%',
+      },
+        duration: 1,
+        delay: .3,
+        stagger: .2,
+        opacity: 0,
+        y: 40,
+        ease: 'ease'
+      },
+    )
+  }, [])
+
   return (
     <>
       <section 
@@ -114,14 +166,17 @@ const Contact = () => {
       <Wedge />
         <Heading 
           title="contact"
-          color='#fff' />
+          color='#fff'
+          id="contactHeading" />
 
-        <p style={{
-          textAlign: 'center', 
-          marginBottom: '3rem',
-          color: '#04c2c9'
-        }}>
-
+        <p 
+          style={{
+            textAlign: 'center', 
+            marginBottom: '3rem',
+            color: '#04c2c9',
+            padding: '0 1rem'
+          }}
+          class="description" >
             Have a question or want to work together?
         </p>
 
@@ -138,7 +193,8 @@ const Contact = () => {
               value={nameState.value}
               handleChange={e => nameChangeHandler(e.target.value)}
               style={nameState.error ?
-                {border: '1px solid red'} : null} />
+                {border: '1px solid red'} : null}
+              className="input" />
 
               {nameState.error ?
               <div className={styles.ErrorMessage}>
@@ -153,7 +209,8 @@ const Contact = () => {
                 value={emailState.value}
                 handleChange={e => emailChangeHandler(e.target.value)}
                 style={emailState.error ?
-                  {border: '1px solid red'} : null} />
+                  {border: '1px solid red'} : null}
+                className="input" />
 
               {emailState.error ?
               <div className={styles.ErrorMessage}>
@@ -167,7 +224,8 @@ const Contact = () => {
               value={messageState.value}
               handleChange={e => messageChangeHandler(e.target.value)}
               style={messageState.error ?
-                {border: '1px solid red'} : null} >
+                {border: '1px solid red'} : null}
+              className="input" >
             </TextArea>
 
             {messageState.error ?
@@ -178,7 +236,7 @@ const Contact = () => {
             {successState ? 
             <div className={styles.SuccessMessage}>Your message has been sent!</div> : null}
             {!successState ?
-            <Submit /> : null}
+            <Submit className="input"/> : null}
             
 
           </Form>

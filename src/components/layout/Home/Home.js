@@ -4,7 +4,7 @@ import Background from '../../../assets/digitalBG.mp4'
 import Container from '../../UI/Container/Container'
 
 import { Link } from 'react-scroll'
-import { TweenMax, Power3 } from 'gsap'
+import gsap from 'gsap'
 
 
 const Home = () => {
@@ -14,36 +14,36 @@ const Home = () => {
 
   useEffect(() => {
     // P1
-    TweenMax.from(
+    gsap.from(
       p1,
       2,
       {
         opacity: 0,
         x: -60,
-        ease: Power3.easeOut
+        ease: 'ease-out'
       }
     )
 
     // P2
-    TweenMax.from(
+    gsap.from(
       p2,
       2,
       {
         opacity: 0,
         x: 60,
-        ease: Power3.easeOut,
+        ease: 'ease-out',
         delay: .3
       }
     )
 
     // CTA
-    TweenMax.from(
+    gsap.from(
       cta,
       2,
       {
         opacity: 0,
         y: 60,
-        ease: Power3.easeOut,
+        ease: 'ease-out',
         delay: .5
       }
     )

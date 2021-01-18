@@ -10,10 +10,13 @@
   list-style: none;
   width: 100%;
   padding: .8rem;
+  display: flex;
+  height: 50.59px;
 } 
 
 .NavbarLi {
-  display: inline;
+  height: 100%;
+  transition: all .5s ease;
 }
 
 .NavbarA {
@@ -24,15 +27,37 @@
   transition: color .5s ease;
 }
 
-.NavbarLi:hover {
-  background-color: #1e242c;
-  height: 100%;
-}
-
 .NavbarA:hover {
   color: #e31b6d;
 }
 
-.Active {
-  color: #e31b6d;
+.Hamburger {
+  position: absolute;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  right: 0;
+  height: 50.59px;
+  cursor: pointer;
+  color: #fff;
+  margin: 0 2rem 0 auto;
+}
+
+@media screen and (max-width: 750px) {
+  .Hamburger {
+    display: flex;
+  }
+  
+  .NavbarUl {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+  
+  .NavbarLi {
+    background-color: #1b242f;
+    padding: 2rem 0;
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
 }

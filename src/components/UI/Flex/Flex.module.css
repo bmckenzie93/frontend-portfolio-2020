@@ -4,10 +4,10 @@
   margin: 3rem 0; 
 }
 
-@media screen and (max-width: 750px) {
+@media (max-width: 750px) {
   .Flex {
     flex-direction: column;
-    margin: 3rem auto;
+    margin: 0 auto;
   }
 }
 

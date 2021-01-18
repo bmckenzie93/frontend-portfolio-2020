@@ -15,3 +15,15 @@
     background-color: #04c2c9;
     border: 2px solid #04c2c9;
   }
+
+@media (max-width: 550px) {
+  .Button {
+    margin: .5rem 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .Button {
+    width: 100%;
+  }
+}
