@@ -1,20 +1,52 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Heading from '../../UI/Heading/Heading'
 import Project from './Project/Project'
 import styles from './Projects.module.css'
 
 import immersed_in_art from '../../../assets/immersed_in_art.png'
+import immersed_demo from '../../../assets/IIAcompressed.mp4'
+
 import wild_water_world from '../../../assets/wild_water_world.png'
+import wild_demo from '../../../assets/WWWcompressed.mp4'
+
 import eugene_food_scene from '../../../assets/eugene_food_scene.png'
+import eugene_demo from '../../../assets/EFScompressed.mp4'
+
 import little_help_book from '../../../assets/little_help_book.png'
+import little_demo from '../../../assets/LHBcompressed.mp4'
+
 import Container from '../../UI/Container/Container'
 
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import VideoPlayer from '../../UI/VideoPlayer/VideoPlayer'
 gsap.registerPlugin(ScrollTrigger)
 
 
 const Projects = () => {
+
+  const [videoState, setVideoState] = useState({
+    isHidden: true,
+    src: null
+  })
+
+  // SHOW VIDEO
+  const showVideo = src => {
+    console.log('show video clicked')
+    setVideoState({
+      isHidden: false,
+      src: src
+    })
+  }
+
+  // CLOSE VIDEO PLAYER
+  const handleClose = () => {
+    setVideoState({
+      isHidden: true,
+      src: null
+    })
+  }
+
 
   useEffect(() => {
     // Heading
@@ -51,7 +83,6 @@ const Projects = () => {
 
 
 
-
   return (
     <section 
       className={styles.Projects}
@@ -71,7 +102,7 @@ const Projects = () => {
             with aspirations to include food sources and networks beyond 
             restaurant delivery and take-out. 
             This is an Open Eugene project and part of the Code for America network.'
-          video=""
+          video={() => showVideo(eugene_demo)}
           website="http://eugenefoodscene.com"
           github="https://github.com/bmckenzie93/eugene-food-scene/blob/develop/EugeneFoodScene/wwwroot/css/site.css"
           className="project" />
@@ -84,7 +115,7 @@ const Projects = () => {
             Landing page for artists to sign up and share their story on the 
             " Immersed in Art Podcast " hosted by " Off The Wall Graffiti " 
             non-profit organization.'
-          video=""
+          video={() => showVideo(immersed_demo)}
           website="https://flamboyant-noether-04fe12.netlify.app"
           github="https://github.com/bmckenzie93/immersedInArt"
           className="project" />
@@ -97,7 +128,7 @@ const Projects = () => {
             Water park example website displaying fun images, 
             allowing people to sign up for team water games, 
             and displaying a dynamic drink menu for the nightclub wet bar.'
-          video=""
+          video={() => showVideo(wild_demo)}
           website="https://xenodochial-nobel-c567c4.netlify.app"
           github="https://github.com/bmckenzie93/wild-water-world"
           className="project" />
@@ -111,10 +142,15 @@ const Projects = () => {
             working with local agencies to make it easier for at-risk populations 
             to find the resources they need.
             This is an Open Eugene project and part of the Code for America network.'
-          video=""
+          video={() => showVideo(little_demo)}
           website="https://littlehelpbook.com/"
           github="https://github.com/OpenEugene/little-help-book-web"
           className="project" />
+
+          <VideoPlayer
+            style={videoState.isHidden ? {display: 'none'} : {display: 'flex'}}
+            src={videoState.src}
+            closeClick={handleClose} />
 
       </Container>
     </section>

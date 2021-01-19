@@ -18,7 +18,7 @@ const ProjectBody = props => {
           <div className={styles.CTA}>
             <FlexWrap>
               <Link 
-                video=''>
+                onClick={props.video}>
                   Video
               </Link>
               <Link 
