@@ -1,9 +1,7 @@
 import React from 'react'
 import styles from './Input.module.css'
 
-
 const Input = props => {
-  
   const className = () => {
     return`
     ${props.className} ${styles.Input}

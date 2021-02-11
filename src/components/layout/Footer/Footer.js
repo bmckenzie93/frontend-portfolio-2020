@@ -3,7 +3,6 @@ import Container from '../../UI/Container/Container'
 import styles from './Footer.module.css'
 import Resume from '../../../assets/BMcKenzie_Resume.pdf'
 
-
 import { animateScroll as Scroll } from 'react-scroll'
 
 const Footer = () => {

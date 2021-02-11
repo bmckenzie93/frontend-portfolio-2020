@@ -64,7 +64,6 @@ const Contact = () => {
     let name = nameState.value;
     let email = emailState.value;
     let message = messageState.value;
-    
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
     if(name === '') {
@@ -92,7 +91,7 @@ const Contact = () => {
 
     if(nameState.value !== '' && emailState.value !== '' && messageState.value !== '') {
         sendEmail()
-      }
+    }
   }
 
   // EMAIL JS (Send Email)
@@ -123,7 +122,7 @@ const Contact = () => {
         opacity: 0,
         y: -60,
         ease: 'ease-in'
-      },
+    },
     )
 
     // Description
@@ -137,9 +136,8 @@ const Contact = () => {
         opacity: 0,
         y: 60,
         ease: 'ease-in'
-      },
+    },
     )
-
 
     // Form Inputs
     gsap.from('.input', {
@@ -154,7 +152,7 @@ const Contact = () => {
         opacity: 0,
         y: 40,
         ease: 'ease'
-      },
+    },
     )
   }, [])
 
@@ -163,20 +161,20 @@ const Contact = () => {
       <section 
         className={styles.Contact}
         id='contact' >
-      <Wedge />
+        <Wedge />
         <Heading 
           title="contact"
           color='#fff'
           id="contactHeading" />
 
-        <p 
+        <p
           style={{
             textAlign: 'center', 
             marginBottom: '3rem',
             color: '#04c2c9',
             padding: '0 1rem'
           }}
-          class="description" >
+          className="description" >
             Have a question or want to work together?
         </p>
 
@@ -196,23 +194,23 @@ const Contact = () => {
                 {border: '1px solid red'} : null}
               className="input" />
 
-              {nameState.error ?
+            {nameState.error ?
               <div className={styles.ErrorMessage}>
                 Please enter your name
               </div> : null}
 
-              <Input 
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter Email"
-                value={emailState.value}
-                handleChange={e => emailChangeHandler(e.target.value)}
-                style={emailState.error ?
-                  {border: '1px solid red'} : null}
-                className="input" />
+            <Input 
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter Email"
+              value={emailState.value}
+              handleChange={e => emailChangeHandler(e.target.value)}
+              style={emailState.error ?
+                {border: '1px solid red'} : null}
+              className="input" />
 
-              {emailState.error ?
+            {emailState.error ?
               <div className={styles.ErrorMessage}>
                 Please enter a valid email address
               </div> : null}
@@ -232,12 +230,11 @@ const Contact = () => {
               <div className={styles.ErrorMessage}>
                 Please enter your message
               </div> : null}
-            
+
             {successState ? 
-            <div className={styles.SuccessMessage}>Your message has been sent!</div> : null}
-            {!successState ?
+              <div className={styles.SuccessMessage}>Your message has been sent!</div> : null}
+              {!successState ?
             <Submit className="input"/> : null}
-            
 
           </Form>
         </Container>

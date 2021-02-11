@@ -24,7 +24,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 
 const Projects = () => {
-
+  // VIDEO STATE
   const [videoState, setVideoState] = useState({
     isHidden: true,
     src: null
@@ -46,7 +46,6 @@ const Projects = () => {
       src: null
     })
   }
-
 
   useEffect(() => {
     // Heading
@@ -79,9 +78,6 @@ const Projects = () => {
       },
     )
   }, [])
-
-
-
 
   return (
     <section 

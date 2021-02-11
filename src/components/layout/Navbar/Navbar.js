@@ -11,14 +11,6 @@ const Navbar = () => {
   const handleToggle = () => {
     setIsHamburger(!isHamburger)
   }
-  
-  // Close Mobile
-  // const closeMobileNav = () => {
-  //   setIsHamburger(!isHamburger)
-
-  // }
-
-
 
   // ACTIVE NAV LINKS ON SCROLL
   const findActive = (e) => {
@@ -49,25 +41,9 @@ const Navbar = () => {
       }
     }
   }
-  
+
   window.addEventListener('scroll', throttle(findActive, 10))
 
-  // HAMBURGER CLASS NAME FUNCTION
-  // const hamburgerStyle = () => {
-  //   return `
-  //     fas fa-2x fa-bars ${styles.Hamburger}
-  //   `
-  // }
-
-  const hamburger = document.getElementById('hamburger')
-  
-  const show = () => {
-    const navUl = document.getElementById('navUl')
-
-    navUl.classList.toggle('show')
-    
-  }
-  
   return (
     <nav className={styles.Navbar}>
       <Container size="Large">

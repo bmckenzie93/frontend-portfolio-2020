@@ -57,7 +57,7 @@ const Home = () => {
       <video autoPlay loop muted className={styles.Video}>
         <source src={Background} type="video/mp4"/>
       </video>
-      
+
       <Container size="Large">
         <p ref={el => { p1 = el }}>
           Hello, I'm <b style={{color: '#e31b6d'}}>Brandon McKenzie</b>.

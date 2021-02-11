@@ -86,7 +86,7 @@ const About = () => {
     <section 
       className={styles.About}
       id='about' >
-        
+
       <Container size="Large">
         <Heading 
           title ='about'
@@ -115,7 +115,6 @@ const About = () => {
               <h3 style={{marginBottom: '1rem', color: '#e31b6d' }}>Responsive Layouts</h3>
               <p>My designs will work on any device including desktops, tablets, and mobile phones.</p>
             </div>
-
           </Card>
 
           <Card>
@@ -151,7 +150,6 @@ const About = () => {
           <i className={iconStyle("npm")}></i>
         </FlexWrap>
       </Container>
-
     </section>
   )
 }
