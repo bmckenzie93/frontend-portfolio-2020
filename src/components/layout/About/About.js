@@ -146,8 +146,10 @@ const About = () => {
           <i className={iconStyle("sass")}></i>
           <i className={iconStyle("bootstrap")}></i>
           <i className={iconStyle("wordpress")}></i>
+          <i className={iconStyle("shopify")}></i>
           <i className={iconStyle("github-square")}></i>
           <i className={iconStyle("npm")}></i>
+          <i className={iconStyle("gulp")}></i>
         </FlexWrap>
       </Container>
     </section>

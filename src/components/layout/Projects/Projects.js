@@ -3,6 +3,8 @@ import Heading from '../../UI/Heading/Heading'
 import Project from './Project/Project'
 import styles from './Projects.module.css'
 
+import antarctica from '../../../assets/antarctica_720x406.jpg'
+
 import immersed_in_art from '../../../assets/immersed_in_art.png'
 import immersed_demo from '../../../assets/IIAcompressed.mp4'
 
@@ -32,7 +34,6 @@ const Projects = () => {
 
   // SHOW VIDEO
   const showVideo = src => {
-    console.log('show video clicked')
     setVideoState({
       isHidden: false,
       src: src
@@ -88,6 +89,18 @@ const Projects = () => {
           title="projects"
           color="#000"
           id="projectsHeading" />
+
+          <Project 
+          title='Antarctica Pacific Sound & Vision'
+          image={antarctica}
+          technologies='SASS / NETLIFY'
+          description='
+            Collects and delivers signatures, which will publicly support the Convention 
+            for the Conservation of Antarctic Marine Living Resources this year.'
+          video={() => showVideo(eugene_demo)}
+          website="http://antarctica.pacificsv.org"
+          github="https://github.com/bmckenzie93/antarctica-landing-page"
+          className="project" />
 
           <Project 
           title='Eugene Food Scene'
@@ -147,7 +160,6 @@ const Projects = () => {
             style={videoState.isHidden ? {display: 'none'} : {display: 'flex'}}
             src={videoState.src}
             closeClick={handleClose} />
-
       </Container>
     </section>
   )
