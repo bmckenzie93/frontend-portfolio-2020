@@ -19,7 +19,6 @@ const Project = props => {
           image={props.image}
           technologies={props.technologies}
           description={props.description}
-          video={props.video}
           website={props.website}
           github={props.github}
           className={props.className} />

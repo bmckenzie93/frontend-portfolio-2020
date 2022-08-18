@@ -17,22 +17,22 @@ const ProjectBody = props => {
 
           <div className={styles.CTA}>
             <FlexWrap>
-              <Link 
-                onClick={props.video}>
-                  Video
-              </Link>
-              <Link 
-                href={props.website}
-                target='_blank'
-                rel='noreferrer' >
-                  Website
-              </Link>
-              <Link 
+              {props.website
+                ? <Link 
+                  href={props.website}
+                  target='_blank'
+                  rel='noreferrer' >
+                    View Site
+                </Link>
+                : ''}
+              {props.github
+              ? <Link 
                 href={props.github}
                 target='_blank'
                 rel='noreferrer' >
-                  GitHub
+                  See Code
               </Link>
+              : ''}
             </FlexWrap>
           </div>
         </div>

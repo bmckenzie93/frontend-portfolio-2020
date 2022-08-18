@@ -1,53 +1,26 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Heading from '../../UI/Heading/Heading'
 import Project from './Project/Project'
 import styles from './Projects.module.css'
 
+import whm from '../../../assets/whm_720x406.jpg'
+import wtq from '../../../assets/wtq_720x406.jpg'
+import genu from '../../../assets/genu_720x406.jpg'
+import wcpa from '../../../assets/wcpa_720x406.jpg'
 import antarctica from '../../../assets/antarctica_720x406.jpg'
-
-import immersed_in_art from '../../../assets/immersed_in_art.png'
-import immersed_demo from '../../../assets/IIAcompressed.mp4'
-
-import wild_water_world from '../../../assets/wild_water_world.png'
-import wild_demo from '../../../assets/WWWcompressed.mp4'
-
-import eugene_food_scene from '../../../assets/eugene_food_scene.png'
-import eugene_demo from '../../../assets/EFScompressed.mp4'
-
-import little_help_book from '../../../assets/little_help_book.png'
-import little_demo from '../../../assets/LHBcompressed.mp4'
+import immersed_in_art from '../../../assets/immersed-in-art_720x406.jpg'
+import little_help_book from '../../../assets/little-help-book_720x406.jpg'
 
 import Container from '../../UI/Container/Container'
 
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import VideoPlayer from '../../UI/VideoPlayer/VideoPlayer'
 gsap.registerPlugin(ScrollTrigger)
 
 
 const Projects = () => {
-  // VIDEO STATE
-  const [videoState, setVideoState] = useState({
-    isHidden: true,
-    src: null
-  })
-
-  // SHOW VIDEO
-  const showVideo = src => {
-    setVideoState({
-      isHidden: false,
-      src: src
-    })
-  }
-
-  // CLOSE VIDEO PLAYER
-  const handleClose = () => {
-    setVideoState({
-      isHidden: true,
-      src: null
-    })
-  }
-
+  
+  // GSAP
   useEffect(() => {
     // Heading
     gsap.from('#projectsHeading', {
@@ -91,75 +64,72 @@ const Projects = () => {
           id="projectsHeading" />
 
           <Project 
-          title='Antarctica Pacific Sound & Vision'
+            title='Smoke Free Utah'
+            image={wtq}
+            // technologies=''
+            description='
+              Way to Quit offers tools to help 
+              quit nicotine. Collects emails and
+              provides information with fun animations
+              and interactive elements.'
+            website="https://waytoquit.org/"
+            // github="https://github.com/bmckenzie93/"
+            className="project" />
+          
+          <Project 
+            title='The Boeing Company'
+            image={whm}
+            // technologies='SASS / NETLIFY'
+            description="
+              A page celebrating Women’s History & Working Toward Gender Equity."
+            website="https://www.boeing.com/history/whm.page"
+            // github="https://github.com/bmckenzie93/"
+            className="project" />
+
+          <Project 
+          title='Pacific Sound and Vision'
           image={antarctica}
-          technologies='SASS / NETLIFY'
+          // technologies='SASS / NETLIFY'
           description='
             Collects and delivers signatures, which will publicly support the Convention 
             for the Conservation of Antarctic Marine Living Resources this year.'
-          video={() => showVideo(eugene_demo)}
           website="http://antarctica.pacificsv.org"
           github="https://github.com/bmckenzie93/antarctica-landing-page"
           className="project" />
 
           <Project 
-          title='Eugene Food Scene'
-          image={eugene_food_scene}
-          technologies='Blazorise / Flexbox / Grid'
+          title='Genu Bank'
+          image={genu}
+          // technologies=''
           description='
-            A COVID-19 recovery food locating app
-            with aspirations to include food sources and networks beyond 
-            restaurant delivery and take-out. 
-            This is an Open Eugene project and part of the Code for America network.'
-          video={() => showVideo(eugene_demo)}
-          website="http://eugenefoodscene.com"
-          github="https://github.com/bmckenzie93/eugene-food-scene/blob/develop/EugeneFoodScene/wwwroot/css/site.css"
+            Provides information for Genu Bank, 
+            and collects email addresses.'
+          website="https://genubank.com/"
+          // github="https://github.com/bmckenzie93/"
           className="project" />
 
-        <Project 
-          title='Immersed in Art'
-          image={immersed_in_art}
-          technologies='Sass / Flexbox / PHP'
+          {/* <Project 
+          title='West Coast Painters Academy'
+          image={wcpa}
+          // technologies=''
           description='
-            Landing page for artists to sign up and share their story on the 
-            " Immersed in Art Podcast " hosted by " Off The Wall Graffiti " 
-            non-profit organization.'
-          video={() => showVideo(immersed_demo)}
-          website="https://flamboyant-noether-04fe12.netlify.app"
-          github="https://github.com/bmckenzie93/immersedInArt"
+            Allows students to view information about upcoming classes, 
+            register for the classes, and pay for their courses.'
+          website="http://wcpaintersacademy.com/"
+          // github="https://github.com/bmckenzie93/"
           className="project" />
 
-        <Project 
-          title='Wild Water World'
-          image={wild_water_world}
-          technologies='Sass / AJAX / Flexbox / Grid'
-          description='
-            Water park example website displaying fun images, 
-            allowing people to sign up for team water games, 
-            and displaying a dynamic drink menu for the nightclub wet bar.'
-          video={() => showVideo(wild_demo)}
-          website="https://xenodochial-nobel-c567c4.netlify.app"
-          github="https://github.com/bmckenzie93/wild-water-world"
-          className="project" />
-
-        <Project 
-          title='Little Help Book'
-          image={little_help_book}
-          technologies='Sass / Flexbox'
-          description='
-            A COVID-19 recovery resource discovery app 
-            working with local agencies to make it easier for at-risk populations 
-            to find the resources they need.
-            This is an Open Eugene project and part of the Code for America network.'
-          video={() => showVideo(little_demo)}
-          website="https://littlehelpbook.com/"
-          github="https://github.com/OpenEugene/little-help-book-web"
-          className="project" />
-
-          <VideoPlayer
-            style={videoState.isHidden ? {display: 'none'} : {display: 'flex'}}
-            src={videoState.src}
-            closeClick={handleClose} />
+          <Project 
+            title='Immersed in Art'
+            image={immersed_in_art}
+            // technologies=''
+            description='
+              Landing page for artists to sign up and share their story on the 
+              "Immersed in Art Podcast" hosted by Off The Wall Graffiti 
+              non-profit organization.'
+            website="https://flamboyant-noether-04fe12.netlify.app"
+            github="https://github.com/bmckenzie93/immersedInArt"
+            className="project" /> */}
       </Container>
     </section>
   )
