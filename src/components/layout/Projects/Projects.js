@@ -4,8 +4,12 @@ import Project from './Project/Project'
 import styles from './Projects.module.css'
 
 import whm from '../../../assets/whm_720x406.jpg'
+import sttv from '../../../assets/sttv_720x406.jpg'
+
 import wtq from '../../../assets/wtq_720x406.jpg'
+import cwc from '../../../assets/cwc_720x406.jpg'
 import genu from '../../../assets/genu_720x406.jpg'
+import boeing from '../../../assets/boeing_720x406.jpg'
 import wcpa from '../../../assets/wcpa_720x406.jpg'
 import antarctica from '../../../assets/antarctica_720x406.jpg'
 import immersed_in_art from '../../../assets/immersed-in-art_720x406.jpg'
@@ -63,6 +67,39 @@ const Projects = () => {
           color="#000"
           id="projectsHeading" />
 
+        <Project 
+          title='Genu Bank'
+          image={genu}
+          // technologies=''
+          description='
+            Provides information for Genu Bank, 
+            and collects email addresses.'
+          website="https://genubank.com/"
+          // github="https://github.com/bmckenzie93/"
+          className="project" />
+
+          <Project 
+            title='Boeing Airplanes'
+            image={boeing}
+            // technologies='SASS / NETLIFY'
+            description="Global Equity, Diversity & Inclusion 2023 Report page for Boeing Airplanes"
+            website="https://www.boeing.com/principles/diversity-and-inclusion/annual-report/index.page"
+            // github="https://github.com/bmckenzie93/"
+            className="project" />
+
+          <Project 
+            title='See Through the Vape'
+            image={sttv}
+            // technologies=''
+            description='
+              See Through the Vape offers tools to help 
+              quit vaping. Collects emails and
+              provides information with fun animations
+              and interactive elements.'
+            website="https://seethroughthevape.org/"
+            // github="https://github.com/bmckenzie93/"
+            className="project" />
+
           <Project 
             title='Smoke Free Utah'
             image={wtq}
@@ -76,15 +113,6 @@ const Projects = () => {
             // github="https://github.com/bmckenzie93/"
             className="project" />
           
-          <Project 
-            title='The Boeing Company'
-            image={whm}
-            // technologies='SASS / NETLIFY'
-            description="
-              A page celebrating Women’s History & Working Toward Gender Equity."
-            website="https://www.boeing.com/history/whm.page"
-            // github="https://github.com/bmckenzie93/"
-            className="project" />
 
           <Project 
           title='Pacific Sound and Vision'
@@ -98,15 +126,16 @@ const Projects = () => {
           className="project" />
 
           <Project 
-          title='Genu Bank'
-          image={genu}
-          // technologies=''
+          title='Colorado Wildlife Council'
+          image={cwc}
+          // technologies='SASS / NETLIFY'
           description='
-            Provides information for Genu Bank, 
-            and collects email addresses.'
-          website="https://genubank.com/"
-          // github="https://github.com/bmckenzie93/"
+            Collects emails & donations while providing information about programs, events, & meetings from the Colorado Wildlife Council'
+          website="https://cowildlifecouncil.org/"
+          // github="https://github.com/bmckenzie93/antarctica-landing-page"
           className="project" />
+
+
 
           {/* <Project 
           title='West Coast Painters Academy'
